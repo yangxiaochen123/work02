@@ -24,6 +24,15 @@ def request_url():
     print("详细内容：" + share_content)
     print('\n')
 
+    print("-------------" + name + "-------------")
+    try:  # 通过异常抛出，使得结束时不会报错
+        while (True):  # 通过循环来不断更新价格
+            nowTimeandPrint = time.strftime('%Y' + '-' + '%m' + '-' + '%d' + ' %H:%M:%S,价格为' + price)
+            print(nowTimeandPrint)
+            time.sleep(3)  # time的sleep方法，使每三秒更新一次
+    except:
+        print("程序结束")
+
 #调用方法
 if __name__ == '__main__':
     request_url()
